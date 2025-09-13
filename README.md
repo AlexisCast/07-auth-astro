@@ -48,3 +48,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     -   [Navbar component](https://www.creative-tim.com/twcomponents/component/navbar-component)
     -   [Login form](https://www.creative-tim.com/twcomponents/component/login-form-ui-by-tailwindcss)
 -   feat 2: Navigation & Estructure
+-   feat 3: Astro Middleware
+    -   [Astro Middleware](https://docs.astro.build/en/guides/middleware/)
