@@ -47,3 +47,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 -   feat 1: Initial Setup
     -   [Navbar component](https://www.creative-tim.com/twcomponents/component/navbar-component)
     -   [Login form](https://www.creative-tim.com/twcomponents/component/login-form-ui-by-tailwindcss)
+-   feat 2: Navigation & Estructure

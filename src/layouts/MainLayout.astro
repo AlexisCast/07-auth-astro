@@ -19,6 +19,8 @@ const { title = "Auth Astro App" } = Astro.props;
 	</head>
 	<body>
 		<Navbar />
-		<slot />
+		<main class="container m-auto max-w-5xl px-2">
+			<slot />
+		</main>
 	</body>
 </html>
