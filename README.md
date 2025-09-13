@@ -42,6 +42,8 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-#### Section 6 - Server Side Rendering and Endpoints
+#### Section 8 - Authentication & Protected Routes
 
--
+-   feat 1: Initial Setup
+    -   [Navbar component](https://www.creative-tim.com/twcomponents/component/navbar-component)
+    -   [Login form](https://www.creative-tim.com/twcomponents/component/login-form-ui-by-tailwindcss)
