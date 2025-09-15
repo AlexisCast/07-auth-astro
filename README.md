@@ -52,3 +52,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     -   [Astro Middleware](https://docs.astro.build/en/guides/middleware/)
 -   feat 4: Own Authentication
 -   feat 5: Action - Register User
+-   feat 6: Cookies - Remember User
