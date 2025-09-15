@@ -50,3 +50,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 -   feat 2: Navigation & Estructure
 -   feat 3: Astro Middleware
     -   [Astro Middleware](https://docs.astro.build/en/guides/middleware/)
+-   feat 4: Own Authentication
