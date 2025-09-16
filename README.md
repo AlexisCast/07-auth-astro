@@ -60,3 +60,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 -   feat 9: Display Auth User Info
     -   [profile card](https://www.creative-tim.com/twcomponents/component/profile-card-13)
     -   [avatar](https://www.creative-tim.com/twcomponents/component/profile-card-13)
+-   feat 10: Logout - Close Session

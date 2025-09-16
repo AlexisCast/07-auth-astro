@@ -6,7 +6,7 @@ const firebaseUser = firebase.auth.currentUser;
 // console.log("🚀 ~ firebaseUser:", firebaseUser)
 
 if (firebaseUser === null) {
-	Astro.redirect("/login");
+	return Astro.redirect("/login");
 }
 
 const { displayName, email, emailVerified, photoURL } = firebaseUser;
