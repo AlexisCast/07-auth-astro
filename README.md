@@ -57,3 +57,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     -   [Firebase](https://firebase.google.com/?authuser=1)
     -   [Authentication](https://docs.astro.build/en/guides/authentication/)
 -   feat 8: Auth by Email & Password
+-   feat 9: Display Auth User Info
+    -   [profile card](https://www.creative-tim.com/twcomponents/component/profile-card-13)
+    -   [avatar](https://www.creative-tim.com/twcomponents/component/profile-card-13)
