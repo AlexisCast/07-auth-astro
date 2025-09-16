@@ -33,7 +33,7 @@ export const registerUser = defineAction({
         email,
         password
       );
-      console.log("🚀 ~ user:", user)
+      // console.log("🚀 ~ user:", user)
 
       // Update the name (displayName) of the user
 
