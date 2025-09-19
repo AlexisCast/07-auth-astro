@@ -9,6 +9,8 @@ if (firebaseUser === null) {
 	return Astro.redirect("/login");
 }
 
+await firebaseUser?.reload();
+
 const { displayName, email, emailVerified, photoURL } = firebaseUser;
 const name = displayName ?? "No display Name";
 

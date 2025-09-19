@@ -62,3 +62,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     -   [avatar](https://www.creative-tim.com/twcomponents/component/profile-card-13)
 -   feat 10: Logout - Close Session
 -   feat 11: Login - Start Session
+-   feat 12: Display Name & Verify Email
