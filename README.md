@@ -63,3 +63,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 -   feat 10: Logout - Close Session
 -   feat 11: Login - Start Session
 -   feat 12: Display Name & Verify Email
+-   feat 13: Google Sign-In

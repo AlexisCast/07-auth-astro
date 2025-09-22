@@ -72,6 +72,18 @@ const rememberMe = !!email;
 					>
 						Sign in
 					</button>
+
+					<div class="flex flex-1 w-full my-2">
+						<div class="w-full border-t-2 border-gray-500"></div>
+					</div>
+
+					<button
+						type="submit"
+						id="btn-google"
+						class="disabled:bg-gray-300 w-full flex justify-center bg-red-400 hover:bg-red-500 text-gray-100 p-3 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500"
+					>
+						Sign in with Google
+					</button>
 				</div>
 			</form>
 			<div class="pt-5 text-center text-gray-400 text-xs">
@@ -91,13 +103,19 @@ const rememberMe = !!email;
 </AuthLayout>
 
 <script>
+	import { firebase } from "@/firebase/config";
 	import { actions } from "astro:actions";
+	import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 	import Swal from "sweetalert2";
 
 	const form = document.querySelector("form") as HTMLFormElement;
 
 	const btnSubmit = document.querySelector(
 		"#btn-submit"
+	) as HTMLButtonElement;
+
+	const btnGoogle = document.querySelector(
+		"#btn-google"
 	) as HTMLButtonElement;
 
 	form.addEventListener("submit", async (e) => {
@@ -121,5 +139,39 @@ const rememberMe = !!email;
 		}
 
 		window.location.replace("/protected");
+	});
+
+	btnGoogle.addEventListener("click", async (e) => {
+		e.preventDefault();
+		btnGoogle?.setAttribute("disabled", "disabled");
+
+		const provider = new GoogleAuthProvider();
+
+		try {
+			// Step 1: Obtain credentials from Google Sign-In Client Side
+			const credentials = await signInWithPopup(firebase.auth, provider);
+			console.log("🚀 ~ credentials:", credentials);
+
+			// Step 2: Verify credentials in backend
+			const { data, error } = await actions.loginWithGoogle(credentials);
+			console.log("🚀 ~ error:", error);
+			console.log("🚀 ~ data:", data);
+
+			if (error) {
+				Swal.fire({
+					icon: "error",
+					title: "Oops... Something went wrong signing in with Google",
+					text: error.message,
+				});
+				btnGoogle?.removeAttribute("disabled");
+				return;
+			}
+
+			btnGoogle.innerText = "Redirecting...";
+			window.location.replace("/protected");
+		} catch (error) {
+			console.error("🚀 ~ error:", error);
+			btnGoogle?.removeAttribute("disabled");
+		}
 	});
 </script>
