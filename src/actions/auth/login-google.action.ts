@@ -15,7 +15,7 @@ export const loginWithGoogle = defineAction({
     }
 
     const response = await signInWithCredential(firebase.auth, credential!);
-    console.log("🚀 ~ response:", response)
+    // console.log("🚀 ~ response:", response)
 
     return { ok: true };
   }

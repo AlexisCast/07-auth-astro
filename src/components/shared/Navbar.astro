@@ -1,3 +1,8 @@
+---
+const { isLoggedIn } = Astro.locals;
+console.log("🚀 ~ isLoggedIn:", isLoggedIn);
+---
+
 <!-- component -->
 <nav class="flex justify-between px-20 py-10 items-center bg-white">
 	<h1 class="text-xl text-gray-800 font-bold">Astro Auth</h1>
@@ -6,15 +11,27 @@
 			<li class="font-semibold text-gray-700">
 				<a href="/">Home</a>
 			</li>
-			<li class="font-semibold text-gray-700">
-				<a href="/protected">Protected</a>
-			</li>
-			<li class="font-semibold text-gray-700">
-				<a href="/login">Log In</a>
-			</li>
-			<li id="logout" class="font-semibold text-gray-700">
-				<a href="#">Exit</a>
-			</li>
+
+			{
+				isLoggedIn && (
+					<li class="font-semibold text-gray-700">
+						<a href="/protected">Protected</a>
+					</li>
+				)
+			}
+
+			{
+				!isLoggedIn ? (
+					<li class="font-semibold text-gray-700">
+						<a href="/login">Log In</a>
+					</li>
+				) : (
+					<li id="logout" class="font-semibold text-gray-700">
+						<a href="#">Exit</a>
+					</li>
+				)
+			}
+
 			<li>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
